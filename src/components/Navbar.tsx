@@ -9,7 +9,7 @@ import useScroll from "@/hooks/useScroll";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const { isScrolling } = useScroll(72);
+  const { isScrolling } = useScroll(64);
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 py-4">
@@ -23,7 +23,7 @@ const Navbar = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <div className="flex h-[72px] items-center justify-between">
+            <div className="flex h-16 items-center justify-between">
               {/* Logo */}
               <div className="ml-4 flex md:ml-0">
                 <a

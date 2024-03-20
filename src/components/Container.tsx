@@ -9,7 +9,7 @@ const Container = ({ children, className }: ContainerProps) => {
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-screen-xl px-2.5 md:px-24",
+        "mx-auto w-full max-w-screen-xl px-2.5 md:px-10 lg:px-24",
         className,
       )}
     >
