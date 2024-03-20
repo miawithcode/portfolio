@@ -20,7 +20,7 @@ export const skills = [
   { label: "CSS", bgColor: "#264de4", icon: React.createElement(DiCss3) },
   {
     label: "JavaScript",
-    bgColor: "#f0db4f",
+    bgColor: "#F1D30D",
     icon: React.createElement(RiJavascriptFill),
   },
   {
@@ -28,7 +28,7 @@ export const skills = [
     bgColor: "#007acc",
     icon: React.createElement(BiLogoTypescript),
   },
-  { label: "React", bgColor: "#007acc", icon: React.createElement(FaReact) },
+  { label: "React", bgColor: "#00C7EB", icon: React.createElement(FaReact) },
   {
     label: "Next.js",
     bgColor: "#171717",

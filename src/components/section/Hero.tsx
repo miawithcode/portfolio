@@ -20,7 +20,7 @@ const scaleVariants = {
 const Hero = () => {
   return (
     <Container>
-      <section className="relative pb-32">
+      <section className="relative lg:pb-16">
         {/* Decoration */}
         <motion.div
           variants={scaleVariants}
@@ -35,7 +35,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2 }}
-          className="absolute right-1 top-[35%] animate-blink md:top-1/2 lg:right-[15%] lg:top-[45%]"
+          className="absolute right-1 top-[45%] animate-blink md:top-1/2 lg:right-[15%] lg:top-[45%]"
         >
           <StarSVGTwo className="h-10 w-10" />
         </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
           </div>
           {/* Title */}
           <div>
-            <h1 className="text-center text-3xl font-bold leading-snug md:text-6xl">
+            <h1 className="text-4xl text-center font-bold leading-snug sm:text-5xl md:text-6xl">
               a{" "}
               <span className="text-primary">
                 &lt;Frontend Developer &#47;&gt;

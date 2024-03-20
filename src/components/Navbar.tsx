@@ -30,10 +30,10 @@ const Navbar = () => {
               {/* Logo */}
               <div className="ml-4 flex md:ml-0">
                 <a
-                  className="font-mono text-2xl font-semibold md:text-3xl"
+                  className="text-2xl font-semibold lowercase md:text-3xl"
                   href="/"
                 >
-                  Mia.
+                  mia.
                 </a>
               </div>
 
