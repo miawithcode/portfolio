@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface NavItemProps {
@@ -7,13 +8,13 @@ interface NavItemProps {
 
 const NavItem = ({ href, label }: NavItemProps) => {
   return (
-    <div className="flex">
+    <motion.div className="flex">
       <div className="relative flex items-center">
-        <Link href={href} className="cursor-pointer capitalize tracking-wide">
+        <Link href={href} className="!cursor-pointer capitalize tracking-wide">
           {label}
         </Link>
-      </div>
-    </div>
+      </div> 
+    </motion.div>
   );
 };
 export default NavItem;

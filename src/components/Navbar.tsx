@@ -6,6 +6,7 @@ import NavItems from "./NavItems";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { FaGithub } from "react-icons/fa";
 import useScroll from "@/hooks/useScroll";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { isScrolling } = useScroll(72);
@@ -14,11 +15,13 @@ const Navbar = () => {
     <nav className="fixed inset-x-0 top-0 z-50 py-4">
       <header className="relative">
         <Container>
-          <div
+          <motion.div
             className={cn("transition-all duration-300 ease-in-out", {
               "border-1 rounded-full border-white border-opacity-40 bg-gray-100 bg-opacity-80 px-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]":
                 isScrolling,
             })}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
           >
             <div className="flex h-[72px] items-center justify-between">
               {/* Logo */}
@@ -57,7 +60,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </Container>
       </header>
     </nav>
