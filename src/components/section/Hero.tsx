@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="relative">
             {/* Name */}
             <h2 className="font-outline text-4xl font-bold tracking-wide text-transparent md:text-5xl">
-              Hello, I&apos;m Mia.
+              hello, i&apos;m mia.
             </h2>
             {/* Status */}
             <div className="absolute -right-16 -top-8 flex items-center gap-1.5 rounded-full border-2 border-green-600 bg-green-50 px-4 py-1 md:-right-48 md:-top-8 md:px-4">
@@ -37,9 +37,9 @@ const Hero = () => {
           {/* Title */}
           <div>
             <h1 className="text-center text-3xl font-bold leading-snug md:text-6xl">
-              A{" "}
+              a{" "}
               <span className="text-primary">
-                &lt;frontend developer &#47;&gt;
+                &lt;Frontend Developer &#47;&gt;
               </span>
               <br />
               with an eye of design
@@ -56,7 +56,7 @@ const Hero = () => {
           <div className="flex space-x-4 pt-6 md:space-x-8">
             <div>
               <Link
-                className="button-shimmer h-10 px-6 text-sm font-medium text-gray-50 md:h-12 md:text-lg"
+                className="button-shimmer h-10 px-6 text-sm font-medium text-gray-50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:h-12 md:text-base"
                 href="#contact"
               >
                 Get In Touch
@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
             <div>
               <Link
-                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-800 px-6 text-sm font-medium md:h-12 md:text-lg"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-800 px-6 text-sm font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:h-12 md:text-base"
                 href="#works"
               >
                 See My Works
