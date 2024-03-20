@@ -12,7 +12,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="ml-4 flex md:ml-0">
               <a
-                className="font-mono text-xl font-semibold md:text-3xl"
+                className="font-mono text-2xl font-semibold md:text-3xl"
                 href="/"
               >
                 Mia.
@@ -32,7 +32,7 @@ const Navbar = () => {
                   target="_blank"
                   className="flex h-16 items-center px-4"
                 >
-                  <FaGithub className="h-6 w-6 text-gray-900" />
+                  <FaGithub className="h-6 w-6" />
                 </a>
               </div>
               <div>
@@ -40,7 +40,7 @@ const Navbar = () => {
                   href="#"
                   className="-mr-4 flex h-16 cursor-pointer items-center px-4"
                 >
-                  <EnvelopeIcon className="h-6 w-6 text-gray-900" />
+                  <EnvelopeIcon className="h-6 w-6" />
                 </a>
               </div>
             </div>
