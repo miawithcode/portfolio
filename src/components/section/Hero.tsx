@@ -7,20 +7,20 @@ import { CircleSVG, StarSVGOne, StarSVGTwo } from "../Svg";
 const Hero = () => {
   return (
     <Container>
-      <section className="relative">
+      <section className="relative pb-32">
         {/* Decoration */}
-        <div className="absolute left-1 top-1/4 md:left-[15%] lg:left-[15%] lg:top-1/4">
+        <div className="absolute -top-[10%] left-1 md:left-[15%] lg:-top-[10%] lg:left-[20%]">
           <StarSVGOne className="h-10 w-10" />
         </div>
-        <div className="absolute right-1 top-1/2 md:top-[55%] lg:right-[10%] lg:top-[45%]">
+        <div className="absolute right-1 top-[35%] md:top-1/2 lg:right-[15%] lg:top-[45%]">
           <StarSVGTwo className="h-10 w-10" />
         </div>
-        <div className="absolute bottom-[20%] left-4 lg:bottom-[20%] lg:left-[20%]">
+        <div className="absolute bottom-[10%] left-4 md:bottom-[15%] md:left-[10%] lg:bottom-[15%] lg:left-[20%]">
           <CircleSVG className="h-4 w-4 md:h-6 md:w-6" />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-20 flex h-svh flex-col items-center justify-center space-y-6">
+        <div className="relative z-20 flex flex-col items-center justify-center space-y-6">
           <div className="relative">
             {/* Name */}
             <h2 className="font-outline text-4xl font-bold tracking-wide text-transparent md:text-5xl">
