@@ -27,8 +27,11 @@ const Hero = () => {
               hello, i&apos;m mia.
             </h2>
             {/* Status */}
-            <div className="absolute -right-16 -top-8 flex items-center gap-1.5 rounded-full border-2 border-green-600 bg-green-50 px-4 py-1 md:-right-48 md:-top-8 md:px-4">
-              <span className="h-3 w-3 rounded-full bg-green-600 md:h-4 md:w-4"></span>
+            <div className="absolute -right-16 -top-8 flex items-center gap-1.5 rounded-full border-2 border-green-600 bg-green-50 px-3 py-1 md:-right-48 md:-top-8">
+              <div className="animate-blink flex h-3 w-3 items-center justify-center rounded-full border border-green-500 bg-transparent md:h-5 md:w-5">
+                <span className="block h-2 w-2 rounded-full bg-green-600 md:h-3 md:w-3"></span>
+              </div>
+
               <p className="font-mono text-xs font-medium tracking-tight text-green-600 md:text-sm">
                 Available for work
               </p>
