@@ -9,8 +9,8 @@ const Skills = () => {
       <section className="mx-auto max-w-3xl scroll-mt-28 text-center py-16">
         <SectionHeading>Tech Stack</SectionHeading>
         <ul className="flex flex-wrap justify-center gap-3">
-          {skills.map((skill) => (
-            <SkillItem key={skill.label} {...skill} />
+          {skills.map((skill, index) => (
+            <SkillItem key={skill.label} index={index} {...skill} />
           ))}
         </ul>
       </section>
