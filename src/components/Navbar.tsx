@@ -12,16 +12,19 @@ const Navbar = () => {
   const { isScrolling } = useScroll(64);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 py-4">
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.7 }}
+      className="fixed inset-x-0 top-0 z-50 py-4"
+    >
       <header className="relative">
         <Container>
-          <motion.div
+          <div
             className={cn("transition-all duration-300 ease-in-out", {
               "border-1 rounded-full border-white border-opacity-40 bg-gray-100 bg-opacity-80 px-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]":
                 isScrolling,
             })}
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
           >
             <div className="flex h-16 items-center justify-between">
               {/* Logo */}
@@ -60,10 +63,10 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </Container>
       </header>
-    </nav>
+    </motion.nav>
   );
 };
 export default Navbar;

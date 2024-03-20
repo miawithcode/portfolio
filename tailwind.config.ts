@@ -17,7 +17,7 @@ const config: Config = {
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
-        blink: "blink 6s linear infinite",
+        blink: "blink 3s ease-in-out infinite",
       },
       keyframes: {
         shimmer: {
@@ -29,25 +29,15 @@ const config: Config = {
           },
         },
         blink: {
-          "0%": { transform: "scale(1)", opacity: "1" },
-          "20%": {
-            transform: "scale(0.9)",
-            opacity: ".8",
+          "0%": { transform: "scale(0.85)" },
+          "33.33%": {
+            transform: "scale(1.15)",
           },
-          "40%": {
-            transform: "scale(1.1)",
-            opacity: "1",
-          },
-          "60%": {
-            transform: "scale(0.90)",
-            opacity: ".8",
-          },
-          "80%": {
-            transform: "scale(1.1)",
-            opacity: "1",
+          "66.67%": {
+            transform: "scale(1.15)",
           },
           "100%": {
-            transform: "scale(1)",
+            transform: "scale(0.85)",
           },
         },
       },
