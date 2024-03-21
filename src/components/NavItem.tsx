@@ -9,14 +9,18 @@ interface NavItemProps {
 }
 
 const NavItem = ({ href, label }: NavItemProps) => {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <motion.div className="flex">
       <div className="relative flex items-center">
         <Link
           href={href}
-          onClick={() => setActiveSection(label)}
+          onClick={() => {
+            setActiveSection(label);
+            setTimeOfLastClick(Date.now());
+          }}
           className="!cursor-pointer justify-center px-4 py-2 capitalize tracking-wide transition"
         >
           {label}

@@ -11,16 +11,16 @@ import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import { useEffect } from "react";
 
 const Skills = () => {
-  const { setActiveSection } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Tech Stack");
     }
-  }, [inView]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <section ref={ref} id="skills" className="mx-auto max-w-5xl scroll-mt-20">
