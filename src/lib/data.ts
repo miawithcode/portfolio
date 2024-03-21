@@ -8,7 +8,7 @@ import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
 import { DiCss3 } from "react-icons/di";
 
 export const navItems = [
-  { href: "/", label: "Home" },
+  { href: "#home", label: "Home" },
   { href: "#skills", label: "Tech Stack" },
   { href: "#works", label: "Selected Work" },
   { href: "#about", label: "About" },

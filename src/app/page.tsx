@@ -8,6 +8,7 @@ export default function Home() {
       <Hero />
       <SectionDivider />
       <Skills />
+      <div className="h-[300vh]"></div>
     </>
   );
 }

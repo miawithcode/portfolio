@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <Container>
-      <section className="mx-auto max-w-3xl scroll-mt-28 py-16 text-center">
+    <section id="skills" className="mx-auto max-w-5xl scroll-mt-20">
+      <Container className="py-16 text-center">
         <div className="relative">
           <motion.div
-            initial={{ opacity: 0, x: 520, y: 150 }}
-            whileInView={{ opacity: 1, x: 510, y: 20 }}
+            initial={{ opacity: 0, x: 545, y: 150 }}
+            whileInView={{ opacity: 1, x: 545, y: 20 }}
             viewport={{
               once: true,
             }}
@@ -30,8 +30,8 @@ const Skills = () => {
             ))}
           </ul>
         </div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 };
 export default Skills;

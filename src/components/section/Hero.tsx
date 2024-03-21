@@ -19,8 +19,8 @@ const scaleVariants = {
 
 const Hero = () => {
   return (
-    <Container>
-      <section className="relative pb-16">
+    <section id="home" className="scroll-mt-[100rem]">
+      <Container className="relative pb-16">
         {/* Decoration */}
         <motion.div
           variants={scaleVariants}
@@ -64,8 +64,8 @@ const Hero = () => {
             </h2>
             {/* Status */}
             <motion.div
-              initial={{opacity: 0, scale: 0, x: -12, y: 8}}
-              animate={{opacity: 1, scale: 1, x: -12, y: 8}}
+              initial={{ opacity: 0, scale: 0, x: -12, y: 8 }}
+              animate={{ opacity: 1, scale: 1, x: -12, y: 8 }}
               transition={{ type: "spring", stiffness: 125, delay: 0.7 }}
               className="absolute -right-16 -top-8 flex items-center gap-1.5 rounded-full border-2 border-green-600 bg-green-50 px-3 py-1 md:-right-48 md:-top-8"
             >
@@ -80,7 +80,7 @@ const Hero = () => {
           </div>
           {/* Title */}
           <div>
-            <h1 className="text-4xl text-center font-bold leading-snug sm:text-5xl md:text-6xl">
+            <h1 className="text-center text-4xl font-bold leading-snug sm:text-5xl md:text-6xl">
               a{" "}
               <span className="text-primary">
                 &lt;Frontend Developer &#47;&gt;
@@ -118,8 +118,8 @@ const Hero = () => {
             </div>
           </div>
         </motion.div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 };
 export default Hero;
