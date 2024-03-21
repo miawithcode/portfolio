@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { navItems } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import type { SectionHref, SectionName } from "@/lib/types";
 
 interface NavItemProps {
-  href: (typeof navItems)[number]["href"];
-  label: (typeof navItems)[number]["label"];
+  href: SectionHref;
+  label: SectionName;
 }
 
 const NavItem = ({ href, label }: NavItemProps) => {

@@ -6,21 +6,10 @@ import SectionHeading from "../SectionHeading";
 import SkillItem from "../SkillItem";
 import { HandDrawCircleSVG } from "../Svg";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-import { useEffect } from "react";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Skills = () => {
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Tech Stack");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("Tech Stack");
 
   return (
     <section ref={ref} id="skills" className="mx-auto max-w-5xl scroll-mt-20">

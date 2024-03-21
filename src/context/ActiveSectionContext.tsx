@@ -1,7 +1,7 @@
 "use client";
 
-import { navItems } from "@/lib/data";
 import React, { useState, createContext, useContext } from "react";
+import type { SectionName } from "@/lib/types";
 
 interface ActiveSectionContextProviderProps {
   children: React.ReactNode;
@@ -13,8 +13,6 @@ interface ActiveSectionContextProps {
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 }
-
-type SectionName = (typeof navItems)[number]["label"];
 
 const ActiveSectionContext = createContext<ActiveSectionContextProps | null>(
   null,

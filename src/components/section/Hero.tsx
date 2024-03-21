@@ -3,12 +3,9 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Container from "../Container";
-import Image from "next/image";
 import { CircleSVG, StarSVGOne, StarSVGTwo } from "../Svg";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -21,16 +18,7 @@ const scaleVariants = {
 };
 
 const Hero = () => {
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView]);
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section ref={ref} id="home" className="scroll-mt-[100rem]">
