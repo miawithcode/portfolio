@@ -3,13 +3,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-interface SkillItemProps {
-  label: string;
-  bgColor: string;
-  icon: React.ReactNode;
-  index: number;
-}
-
 const fadeInVariants = {
   hidden: {
     opacity: 0,
@@ -24,7 +17,7 @@ const fadeInVariants = {
   }),
 };
 
-const SkillItem = ({ label, bgColor, icon, index }: SkillItemProps) => {
+const SkillItem = ({ label, bgColor, icon, index }) => {
   return (
     <motion.li
       variants={fadeInVariants}
@@ -34,7 +27,7 @@ const SkillItem = ({ label, bgColor, icon, index }: SkillItemProps) => {
         once: true,
       }}
       custom={index}
-      className="flex items-center justify-center gap-2 rounded-xl px-5 py-2 text-sm font-medium text-gray-50"
+      className="flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-gray-50"
       style={{ backgroundColor: bgColor }}
     >
       {React.cloneElement(icon, { size: 24 })}

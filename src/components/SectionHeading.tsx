@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 
 interface SectionHeadingProps {
@@ -6,9 +9,14 @@ interface SectionHeadingProps {
 
 const SectionHeading = ({ children }: SectionHeadingProps) => {
   return (
-    <h2 className="mb-8 text-center text-3xl md:text-4xl font-semibold capitalize">
+    <motion.h2
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{type: "tween"}}
+      className="mb-8 text-center text-3xl font-semibold capitalize md:text-4xl"
+    >
       {children}
-    </h2>
+    </motion.h2>
   );
 };
 export default SectionHeading;

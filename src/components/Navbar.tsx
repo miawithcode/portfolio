@@ -22,7 +22,7 @@ const Navbar = () => {
         <Container>
           <div
             className={cn("transition-all duration-300 ease-in-out", {
-              "border-1 rounded-full border-white border-opacity-40 bg-gray-100 bg-opacity-80 px-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]":
+              "border-1 rounded-full border-white border-opacity-40 bg-zinc-100 bg-opacity-80 px-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]":
                 isScrolling,
             })}
           >

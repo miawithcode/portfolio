@@ -20,7 +20,7 @@ const scaleVariants = {
 const Hero = () => {
   return (
     <Container>
-      <section className="relative lg:pb-16">
+      <section className="relative pb-16">
         {/* Decoration */}
         <motion.div
           variants={scaleVariants}
@@ -35,7 +35,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2 }}
-          className="absolute right-1 top-[45%] animate-blink md:top-1/2 lg:right-[15%] lg:top-[45%]"
+          className="absolute right-1 top-[58%] animate-blink md:top-[55%] lg:right-[10%] lg:top-[45%]"
         >
           <StarSVGTwo className="h-10 w-10" />
         </motion.div>
@@ -44,7 +44,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.4 }}
-          className="absolute bottom-[10%] left-4 animate-blink md:bottom-[15%] md:left-[10%] lg:bottom-[15%] lg:left-[20%]"
+          className="absolute bottom-0 left-4 animate-bounce md:bottom-[15%] md:left-[10%] lg:bottom-[15%] lg:left-[20%]"
         >
           <CircleSVG className="h-4 w-4 md:h-6 md:w-6" />
         </motion.div>
@@ -64,9 +64,8 @@ const Hero = () => {
             </h2>
             {/* Status */}
             <motion.div
-              variants={scaleVariants}
-              initial="hidden"
-              animate="visible"
+              initial={{opacity: 0, scale: 0, x: -12, y: 8}}
+              animate={{opacity: 1, scale: 1, x: -12, y: 8}}
               transition={{ type: "spring", stiffness: 125, delay: 0.7 }}
               className="absolute -right-16 -top-8 flex items-center gap-1.5 rounded-full border-2 border-green-600 bg-green-50 px-3 py-1 md:-right-48 md:-top-8"
             >
