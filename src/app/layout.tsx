@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 
 export const metadata: Metadata = {
   title: "Mia",
@@ -28,8 +29,11 @@ export default function RootLayout({
           <div className="flex-1 flex-grow ">
             <div className="absolute left-[-29rem] top-[-4rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#FDD5E7] blur-[10rem] lg:left-[-18rem] lg:top-[-4rem]"></div>
             <div className="absolute right-[-38rem] top-[30rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#f6d046] blur-[10rem] md:top-[24rem] lg:right-[-32rem] lg:top-[20rem]"></div>
-            <Navbar />
-            {children}
+
+            <ActiveSectionContextProvider>
+              <Navbar />
+              {children}
+            </ActiveSectionContextProvider>
           </div>
         </main>
       </body>

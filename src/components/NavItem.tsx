@@ -1,20 +1,22 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { navItems } from "@/lib/data";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 interface NavItemProps {
-  href: string;
-  label: string;
-  handleClick: (label: string) => void;
-  activeSection: string;
+  href: (typeof navItems)[number]["href"];
+  label: (typeof navItems)[number]["label"];
 }
 
-const NavItem = ({ href, label, handleClick, activeSection }: NavItemProps) => {
+const NavItem = ({ href, label }: NavItemProps) => {
+  const { activeSection, setActiveSection } = useActiveSectionContext();
+
   return (
     <motion.div className="flex">
       <div className="relative flex items-center">
         <Link
           href={href}
-          onClick={() => handleClick(label)}
+          onClick={() => setActiveSection(label)}
           className="!cursor-pointer justify-center px-4 py-2 capitalize tracking-wide transition"
         >
           {label}

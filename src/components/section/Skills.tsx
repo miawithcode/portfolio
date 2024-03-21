@@ -6,10 +6,24 @@ import SectionHeading from "../SectionHeading";
 import SkillItem from "../SkillItem";
 import { HandDrawCircleSVG } from "../Svg";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useEffect } from "react";
 
 const Skills = () => {
+  const { setActiveSection } = useActiveSectionContext();
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Tech Stack");
+    }
+  }, [inView]);
+
   return (
-    <section id="skills" className="mx-auto max-w-5xl scroll-mt-20">
+    <section ref={ref} id="skills" className="mx-auto max-w-5xl scroll-mt-20">
       <Container className="py-16 text-center">
         <div className="relative">
           <motion.div

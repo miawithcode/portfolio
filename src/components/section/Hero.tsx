@@ -6,6 +6,9 @@ import Container from "../Container";
 import Image from "next/image";
 import { CircleSVG, StarSVGOne, StarSVGTwo } from "../Svg";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -18,8 +21,19 @@ const scaleVariants = {
 };
 
 const Hero = () => {
+  const { setActiveSection } = useActiveSectionContext();
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView]);
+
   return (
-    <section id="home" className="scroll-mt-[100rem]">
+    <section ref={ref} id="home" className="scroll-mt-[100rem]">
       <Container className="relative pb-16">
         {/* Decoration */}
         <motion.div
