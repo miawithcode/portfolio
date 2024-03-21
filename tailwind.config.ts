@@ -17,7 +17,7 @@ const config: Config = {
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
-        blink: "blink 2s ease-in-out infinite",
+        blink: "blink 1.5s ease-in-out infinite",
       },
       keyframes: {
         shimmer: {
@@ -31,10 +31,10 @@ const config: Config = {
         blink: {
           "0%": { transform: "scale(0.85)" },
           "33.33%": {
-            transform: "scale(1.25)",
+            transform: "scale(1.15)",
           },
           "66.67%": {
-            transform: "scale(1.25)",
+            transform: "scale(1.15)",
           },
           "100%": {
             transform: "scale(0.85)",

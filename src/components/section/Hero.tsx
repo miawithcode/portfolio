@@ -109,7 +109,7 @@ const Hero = () => {
             </div>
             <div>
               <Link
-                className="group inline-flex h-10 items-center justify-center rounded-md border border-gray-800 bg-gray-100 px-6 text-sm font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:h-12 md:text-base "
+                className="group inline-flex h-10 items-center justify-center rounded-md border border-gray-800 bg-white px-6 text-sm font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:h-12 md:text-base "
                 href="#works"
               >
                 See My Works
