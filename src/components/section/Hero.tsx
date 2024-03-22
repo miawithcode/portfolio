@@ -95,7 +95,7 @@ const Hero = () => {
           >
             <div>
               <Link
-                className="button-shimmer group h-10 px-6 text-sm font-medium text-gray-50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:h-12 md:text-base"
+                className="group inline-flex h-10 items-center justify-center rounded-md px-6 text-sm font-medium bg-gray-900 text-gray-50 shadow-lg md:h-12 md:text-base"
                 href="#contact"
               >
                 Get In Touch
@@ -104,7 +104,7 @@ const Hero = () => {
             </div>
             <div>
               <Link
-                className="group inline-flex h-10 items-center justify-center rounded-md border border-gray-800 bg-white px-6 text-sm font-medium shadow-[0_8px_30px_rgb(0,0,0,0.12)] md:h-12 md:text-base "
+                className="group inline-flex h-10 items-center justify-center rounded-md px-6 text-sm font-medium md:h-12 md:text-base "
                 href="#works"
               >
                 View My Works

@@ -33,7 +33,7 @@ const NavItem = ({ href, label }: NavItemProps) => {
                 stiffness: 280,
                 damping: 30,
               }}
-              className="absolute inset-0 -z-10 rounded-full border border-gray-800"
+              className="absolute inset-0 -z-10 rounded-md border border-gray-800"
             ></motion.span>
           )}
         </Link>
