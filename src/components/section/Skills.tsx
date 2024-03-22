@@ -12,12 +12,12 @@ const Skills = () => {
   const { ref } = useSectionInView("Tech Stack");
 
   return (
-    <section ref={ref} id="skills" className="mx-auto max-w-5xl scroll-mt-20">
+    <section ref={ref} id="skills" className="mx-auto max-w-4xl scroll-mt-20">
       <Container className="py-16 text-center">
         <div className="relative">
           <motion.div
-            initial={{ opacity: 0, x: 545, y: 150 }}
-            whileInView={{ opacity: 1, x: 545, y: 20 }}
+            initial={{ opacity: 0, x: 540, y: 150 }}
+            whileInView={{ opacity: 1, x: 540, y: 20 }}
             viewport={{
               once: true,
             }}

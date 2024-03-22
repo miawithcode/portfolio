@@ -12,7 +12,7 @@ const SectionDivider = () => {
         initial={{ scale: 0, y: -50 }}
         animate={{ scale:1, opacity: 1, y: 0 }}
         transition={{
-          delay: 0.9,
+          delay: 0.5,
         }}
       >
         <HandDrawArrowSVG />

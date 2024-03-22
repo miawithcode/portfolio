@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { navItems } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import type { SectionHref, SectionName } from "@/lib/types";
 
@@ -34,7 +33,7 @@ const NavItem = ({ href, label }: NavItemProps) => {
                 stiffness: 280,
                 damping: 30,
               }}
-              className="absolute inset-0 -z-10 rounded-lg border border-gray-800 bg-white"
+              className="absolute inset-0 -z-10 rounded-full border border-gray-800"
             ></motion.span>
           )}
         </Link>
